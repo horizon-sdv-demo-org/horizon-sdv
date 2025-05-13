@@ -114,6 +114,9 @@ pipeline {
                   git config --global credential.helper store
                   git config --global url."https://${GERRIT_USERNAME}@${HORIZON_DOMAIN}/gerrit".insteadOf "https://${HORIZON_DOMAIN}/gerrit"
                   echo https://"${GERRIT_USERNAME}":"${GERRIT_PASSWORD}"@"${HORIZON_DOMAIN}"/gerrit > ~/.git-credentials
+
+                  git clone "https://dev.horizon-sdv-demo.com/gerrit/android/platform/manifest" manifest-test
+                  echo "cloned manifest for test"
                 '''
               }
               archiveArtifacts artifacts: 'build_cache*.txt', followSymlinks: false, onlyIfSuccessful: false, allowEmptyArchive: true
