@@ -134,6 +134,7 @@ pipeline {
                     echo https://"${GERRIT_USERNAME}":"${GERRIT_PASSWORD}"@"${HORIZON_DOMAIN}/gerrit" > ~/.git-credentials
 
                     git clone "https://dev.horizon-sdv-demo.com/gerrit/android/platform/manifest" manifest-test
+                    echo "cloned manifest for test"
 
                     AAOS_GERRIT_MANIFEST_URL="${AAOS_GERRIT_MANIFEST_URL}" \
                     AAOS_REVISION="${AAOS_REVISION}" \
