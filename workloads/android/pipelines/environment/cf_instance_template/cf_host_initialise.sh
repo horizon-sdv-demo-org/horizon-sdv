@@ -37,7 +37,7 @@ function cuttlefish_virtualization() {
 
 # Install additional packages.
 function cuttlefish_install_additional_packages() {
-    local -a package_list=("default-jdk" "adb" "git" "npm" "aapt" "htop")
+    local -a package_list=("default-jdk" "adb" "git" "npm" "aapt" "htop", "qemu-kvm" "libvirt-daemon-system" "libvirt-clients" "bridge-utils" "cpu-checker")
 
     echo "Installing additional packages."
 
